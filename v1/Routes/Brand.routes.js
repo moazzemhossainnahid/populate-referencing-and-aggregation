@@ -1,15 +1,15 @@
-const express = require('express');
-const { createBrand, getAllBrands, getBrandById, updateBrand } = require('../Controllers/Brand.controller');
+const express = require("express");
+const brandController = require("../Controllers/Brand.controller");
+
 const router = express.Router();
 
-router.route('/')
-    .get(getAllBrands)
-    .post(createBrand)
+router.route("/")
+  .post(brandController.createBrand)
+  .get(brandController.getBrands);
 
-router.route('/:id')
-    .get(getBrandById)
-    .patch(updateBrand)
-
+router.route("/:id")
+  .get(brandController.getBrandById)
+  .patch(brandController.updateBrand);
 
 
 module.exports = router;

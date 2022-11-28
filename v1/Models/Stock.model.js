@@ -41,7 +41,7 @@ const stockSchema = mongoose.Schema({
     },
     imageURLs: [{
         type: String,
-        required: rtue,
+        required: true,
         validate: {
             validator: (value) => {
                 if (!Array.isArray(value)) {
