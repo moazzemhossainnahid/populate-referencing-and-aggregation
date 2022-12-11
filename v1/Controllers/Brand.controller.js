@@ -1,6 +1,6 @@
 const {
     createBrandService,
-    getBrandsService,
+    getAllBrandsService,
     getBrandByIdService,
     updateBrandService,
   } = require("../Services/Brand.service");
@@ -26,7 +26,7 @@ const {
   
   exports.getBrands = async (req, res, next) => {
     try {
-      const brands = await getBrandsService(req.body);
+      const brands = await getAllBrandsService();
   
       res.status(200).json({
         status: "success",
