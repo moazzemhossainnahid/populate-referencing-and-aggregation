@@ -7,7 +7,7 @@ const uploader = require('../Middlewares/Uploader');
 
 // const uploader = multer({dest:"Images/"});
 
-router.post("/file-upload", uploader.single("image"), productController.fileUpload);
+router.post("/file-upload", uploader.array("image"), productController.fileUpload);
 
 
 
