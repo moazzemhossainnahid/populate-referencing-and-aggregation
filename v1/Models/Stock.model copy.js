@@ -42,8 +42,22 @@ const stockSchema = mongoose.Schema({
     imageURLs: [{
         type: String,
         required: true,
-        validate: [validator.isURL, "wrong url"]
-      }],
+        validate: {
+            validator: (value) => {
+                if (!Array.isArray(value)) {
+                    return false
+                };
+                let isValid = true;
+                value.forEach(url => {
+                    if (!validator.isURL(url)) {
+                        isValid = false
+                    }
+                });
+                return isValid;
+            },
+            message: "Please Provide a Valid Image URL"
+        }
+    }],
     price: {
         type: Number,
         required: true,
@@ -81,6 +95,7 @@ const stockSchema = mongoose.Schema({
         name: {
             type: String,
             trim: true,
+            lowercase: true,
             required: [true, 'Please Provide a Store Name'],
             enum: {
                 values: ['Dhaka', 'Chittagong', 'Sylhet', 'Khulna', 'Barishal', 'Mymensingh', 'Rajshahi', 'Rangpur'],
@@ -93,7 +108,7 @@ const stockSchema = mongoose.Schema({
             ref: "Store"
         }
     },
-    suppliedBy: {
+    suppiredBy: {
         name: {
             type: String,
             trim: true,

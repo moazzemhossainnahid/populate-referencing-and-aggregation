@@ -34,8 +34,8 @@ exports.getProducts = async (req, res, next) => {
         if (req.query.limit) {
             const limit = req.query.limit;
             queries.limit = (limit * 1);
-          }
-        
+        }
+
 
         // {price:{$gt:50}}
 
@@ -49,9 +49,9 @@ exports.getProducts = async (req, res, next) => {
 
         // Pagination
 
-        if (req.query.page){
+        if (req.query.page) {
 
-            const {page = 1, limit= 10} = req.query;   //'3' '10'
+            const { page = 1, limit = 10 } = req.query;   //'3' '10'
             queries.limit = limit;
             const skip = (page - 1) * parseInt(limit);
 
@@ -274,3 +274,19 @@ exports.bulkDeleteProduct = async (req, res, next) => {
         });
     }
 };
+
+exports.fileUpload = async (req, res) => {
+    try {
+        res.status(200).json({
+            stauts: "success",
+            message: "Successfully Upload a File",
+            data: req.file
+        });
+    } catch (error) {
+        res.status(400).json({
+            status: "failed",
+            message: "File isn't Inserted",
+            error: error.message
+        })
+    }
+}

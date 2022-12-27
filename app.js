@@ -5,6 +5,8 @@ const productsRoute = require("./v1/Routes/Product.routes");
 const brandsRoute = require("./v1/Routes/Brand.routes");
 const categoriesRoute = require("./v1/Routes/Category.routes");
 const stockRoute = require("./v1/Routes/Stock.routes");
+const storeRoute = require("./v1/Routes/Store.routes");
+const suppliersRoute = require("./v1/Routes/Supplier.routes");
 
 
 // middlewares
@@ -17,6 +19,8 @@ app.use("/api/v1/products", productsRoute);
 app.use("/api/v1/brands", brandsRoute);
 app.use("/api/v1/categories", categoriesRoute);
 app.use("/api/v1/stocks", stockRoute);
+app.use("/api/v1/stores", storeRoute);
+app.use("/api/v1/suppliers", suppliersRoute);
 
 
 

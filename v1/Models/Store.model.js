@@ -7,7 +7,6 @@ const storeSchema = mongoose.Schema({
     name: {
         type: String,
         trim: true,
-        lowercase: true,
         required: [true, 'Please Provide a Store Name'],
         enum: {
             values: ['Dhaka', 'Chittagong', 'Sylhet', 'Khulna', 'Barishal', 'Mymensingh', 'Rajshahi', 'Rangpur'],
@@ -37,4 +36,4 @@ const storeSchema = mongoose.Schema({
 
 const Store = mongoose.model("Store", storeSchema);
 
-exports = Store;
+module.exports = Store;

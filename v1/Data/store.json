@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Dhaka",
+        "description": "This is a Brand store in Dhaka",
+        "status": "active"
+    },
+    {
+        "name": "Chittagong",
+        "description": "This is a Brand store in Chittagong",
+        "status": "active"
+    }
+]

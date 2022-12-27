@@ -73,6 +73,7 @@ const supplierSchema = mongoose.Schema(
     },
     imageURL: {
       type: String,
+      required: true,
       validate: [validator.isURL, "Please provide a valid url"],
     },
     nationalIdImageURL: {
