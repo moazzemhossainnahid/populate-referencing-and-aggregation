@@ -66,5 +66,22 @@
     "imageURL": "https://i.ibb.co/WnFSs9Y/unnamed.webp",
     "nationalIdImageURL": "https://i.ibb.co/WnFSs9Y/unnamed.webp",
     "status": "active"
+  },  
+  {
+    "name": "MD. NAHID",
+    "email": "nahid.fresh@test.com",
+    "brand": {
+      "name": "Fresh",
+      "id": "6384d91c62da14cc8e854775"
+    },
+    "contactNumber": ["01111111111", "02222222222"],
+    "emergencyContactNumber": "011111111",
+    "tradeLicenceNumber": 1111111111,
+    "presentAddress": "944 Honduras Street",
+    "permanentAddress": "944 Ghana Street",
+    "location": "chattogram",
+    "imageURL": "https://i.ibb.co/WnFSs9Y/unnamed.webp",
+    "nationalIdImageURL": "https://i.ibb.co/WnFSs9Y/unnamed.webp",
+    "status": "active"
   }
 ]
