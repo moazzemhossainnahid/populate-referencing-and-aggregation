@@ -1,6 +1,6 @@
 const { signupService, findUserByEmail, findUserByToken } = require("../Services/User.service");
-const { sendMailWithGmail, sendMailWithMailGun } = require("../utils/email");
-const { generateToken } = require("../utils/token");
+const { sendMailWithGmail, sendMailWithMailGun } = require("../../Utilities/email");
+const { generateToken } = require("../../Utilities/token");
 
 exports.signup = async (req, res) => {
   try {
